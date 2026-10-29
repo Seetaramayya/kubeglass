@@ -1,0 +1,53 @@
+{
+  "name": "kubeglass",
+  "version": "0.1.0",
+  "description": "A fast, local Kubernetes dashboard in your browser. Reads your kubeconfig, no kubectl memorization needed.",
+  "author": "Seeta Ramayya Vadali",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "kubeglass": "bin/kubeglass.js"
+  },
+  "files": [
+    "bin",
+    "server",
+    "shared",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "npm run build && node bin/kubeglass.js",
+    "dev": "vite",
+    "dev:server": "node bin/kubeglass.js --dev",
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "kubernetes",
+    "k8s",
+    "dashboard",
+    "lens",
+    "kubectl",
+    "ui"
+  ],
+  "dependencies": {
+    "@kubernetes/client-node": "^2.0.1",
+    "express": "^5.3.0",
+    "open": "^11.0.4",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@fontsource-variable/geist": "^5.3.0",
+    "@fontsource-variable/geist-mono": "^5.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
+    "js-yaml": "^5.5.0",
+    "lucide-react": "^1.63.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "vite": "^8.3.5"
+  }
+}
