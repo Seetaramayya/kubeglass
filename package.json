@@ -2,6 +2,22 @@
   "name": "kubeglass",
   "version": "0.1.0",
   "description": "A fast, local Kubernetes dashboard in your browser. Reads your kubeconfig, no kubectl memorization needed.",
+  "keywords": [
+    "kubernetes",
+    "k8s",
+    "dashboard",
+    "lens",
+    "kubectl",
+    "ui"
+  ],
+  "homepage": "https://github.com/Seetaramayya/kubeglass#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seetaramayya/kubeglass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Seetaramayya/kubeglass/issues"
+  },
   "author": "Seeta Ramayya Vadali",
   "license": "Apache-2.0",
   "type": "module",
@@ -24,14 +40,6 @@
     "build": "vite build",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [
-    "kubernetes",
-    "k8s",
-    "dashboard",
-    "lens",
-    "kubectl",
-    "ui"
-  ],
   "dependencies": {
     "@kubernetes/client-node": "^2.0.1",
     "express": "^5.3.0",
